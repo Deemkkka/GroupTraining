@@ -13,7 +13,8 @@
                   VerticalAlignment="Top"
                   Margin="10, 10, 0, 0"
                   Width="150"
-                  SelectedIndex="0"/>
+                  SelectedIndex="0"
+                  SelectionChanged="ComboBoxGroup_SelectionChanged"/>
 
         <ListView x:Name="ListViewDataUsers"
                   Margin="0, 50, 0, 0">
