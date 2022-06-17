@@ -4,21 +4,34 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GroupTraining"
+        xmlns:cmd="clr-namespace:GroupTraining.Infrastructure.Commands"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" 
+        Height="450" 
+        Width="800">
 
     <Grid>
-
+        <DockPanel>
+            <Menu>
+                <MenuItem Header="Файл">
+                    <MenuItem Header="Выход">
+                        <MenuItem.Command>
+                            <cmd:ApplicationCloseCommand />
+                        </MenuItem.Command>
+                    </MenuItem>
+                </MenuItem>
+            </Menu>
+        </DockPanel>
         <ComboBox x:Name="ComboBoxGroup"
                   HorizontalAlignment="Left"
                   VerticalAlignment="Top"
-                  Margin="10, 10, 0, 0"
+                  Margin="10, 35, 0, 0"
                   Width="150"
                   SelectedIndex="0"
                   SelectionChanged="ComboBoxGroup_SelectionChanged"/>
 
         <ListView x:Name="ListViewDataUsers"
-                  Margin="0, 50, 0, 0">
+                  Margin="0, 70, 0, 0">
 
             <ListView.View>
                 <GridView>
