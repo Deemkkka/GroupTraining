@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:GroupTraining"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+
     <Grid>
 
         <ComboBox x:Name="ComboBoxGroup"
@@ -28,6 +29,18 @@
                     </GridView.Columns>
                 </GridView>
             </ListView.View>
+            <ListView.GroupStyle>
+                <GroupStyle>
+                    <GroupStyle.HeaderTemplate>
+                        <DataTemplate>
+                            <Label Content="{Binding Name}"
+                                   Background="DeepSkyBlue"
+                                   Foreground="GreenYellow"
+                                   BorderThickness="2"/>
+                        </DataTemplate>
+                    </GroupStyle.HeaderTemplate>
+                </GroupStyle>
+            </ListView.GroupStyle>
             
         </ListView>
     </Grid>
